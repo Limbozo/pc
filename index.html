@@ -854,7 +854,7 @@ $('#tray-net').onclick=function(){ toast('<b>Связь:</b> канал защи
 $('#showdesk').onclick=function(){ WINS.forEach(function(r){ if(!r.min)minimize(r); }); };
 setInterval(function(){ var d=new Date();
   $('#clock b').textContent=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
-  $('#clock span').textContent=d.toLocaleDateString('ru-RU',{day:'2-digit',month:'2-digit',year:'2014'}); },1000);
+  $('#clock span').textContent=d.toLocaleDateString('ru-RU',{day:'2-digit',month:'2-digit',year:'numeric'}); },1000);
 
 // выключение и синий экран
 function doShutdown(){ $('#shutemb').innerHTML=embTag(); $('#shut').style.display='flex';
